@@ -1,0 +1,39 @@
+.rightbarFriendList{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.rightbarImageContainer{
+    position: relative;
+}
+.rightbarFriend{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.rightbarBadge{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 0px;
+    left: 8px;
+    background-color: rgb(152, 227, 40);
+    border: 2px solid white;
+
+}
+.rightbarFriendImg{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 12px;
+}
+.rightbarFriendName{
+    margin-left: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

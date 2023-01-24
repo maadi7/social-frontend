@@ -1,0 +1,118 @@
+.post{
+    margin-top: 30px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 21px 41px 69px 7px rgba(0,0,0,0.34);
+    -moz-box-shadow: 21px 41px 69px 7px rgba(0,0,0,0.34);
+    box-shadow: 21px 41px 69px 7px rgba(0,0,0,0.34);
+   
+}
+.postWrapper{
+   padding: 20px;
+}
+.postTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.postTopContainer{
+    display: flex;
+    align-items: center;
+
+}
+.postTopInfoText{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 8px;
+ 
+}
+.postTopInfoText1{
+    font-size: 15px;
+    margin-left: 10px;
+    color: rgb(116, 115, 115);
+}
+.postTopImg{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.postTopIcon{
+    cursor: pointer;
+}
+.postCenter{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+}
+.postCenterText{
+    margin-bottom:10px;
+    margin-left: 0px;
+    
+}
+.postCenterPost{
+    width: 100%;
+    object-fit:contain;
+}
+.postBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.postBottomLeft{
+    display: flex;
+    align-items: center;
+    
+}
+.postBottomIcon{
+    font-size: 15px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.postBottomIcon1{
+    margin-left: 5px;
+}
+.postBottomText{
+    font-weight: 400;
+    cursor: pointer;
+    border-bottom: 2px dashed gray;
+}
+.postBottomLikeCount{
+    margin-left: 10px;
+    font-weight: 500;
+}
+.visit{
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 12px;
+    color: white;
+    background-color: #0000ff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.delete{
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 12px;
+    color: white;
+    background-color: #ff6347;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+@media screen and (max-width: 550px) {
+    .postWrapper{
+        padding: 10px;
+     }
+     .postTopImg{
+        width: 45px;
+        height: 45px;
+    }
+    
+}

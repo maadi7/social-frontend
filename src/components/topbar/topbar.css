@@ -1,0 +1,251 @@
+.topbar {
+  background-color: #1877f2;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  padding: 12px;
+}
+
+.topbarWrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+}
+
+.topbarLeft {
+  flex: 3;
+}
+.topbarLogo {
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+.topbarCenter {
+  flex: 5;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  border-radius: 24px;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+}
+.topbarSearchIcon {
+  font-size: 22px !important;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.topbarInput {
+  border: none;
+  width: 70%;
+}
+.topbarInput:focus {
+  outline: none;
+}
+.topbarRight {
+  flex: 4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.topbarRightLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbarLinks {
+  color: white;
+  margin: 0 6px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.topbarIcons {
+  display: flex;
+}
+
+.topbarIconItem {
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.topbarIconBadge {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.topbarImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.searchInputs {
+  margin-top: 105px;
+  display: flex;
+}
+
+.search input {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 18px;
+  padding: 15px;
+  height: 30px;
+  width: 300px;
+}
+
+.searchIcon {
+  height: 60px;
+  width: 50px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+
+.dataResult {
+  width: 300px;
+  max-height: fit-content;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 45px;
+  left: 100px;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dataItem p {
+  margin-left: 10px;
+}
+.dataResult a {
+  text-decoration: none;
+}
+
+.dataResult a:hover {
+  background-color: lightgrey;
+}
+
+#clearBtn {
+  cursor: pointer;
+}
+
+.toggle1{
+  display: none !important;
+  color: white;
+  transition: all 2s ease-in-out;
+}
+.toggleleftbarListItemIcon{
+  color: white;
+  margin-right: 10px;
+}
+
+.toggler{
+  display: flex;
+  margin: 1rem 1rem;
+  transition: all 2s ease-in-out;
+
+
+}
+.toggletopbarRightLinks{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.toggletopbarImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+/* .toggleleftbarListItemIcon{
+  font-size: 27px !important;
+  margin: 10px;
+} */
+.toggletopbarRight{
+  display: flex;
+  flex-direction: column ;
+  width: 100%;
+}
+.toggleleftbarListItemText{
+  color: white;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .toggle1{
+    display: block !important;
+    font-size: 1.8rem !important;
+    transition: all 0.5s ease-in-out;
+
+  }
+  .topbarLogo{
+    display: none;
+  }
+  .topbarRightLinks{
+    display: none;
+  }
+  .topbarCenter{
+    flex: 11;
+  }
+  .topbarSearchIcon {
+    font-size: 22px !important;
+    margin-left: 4rem;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 550px) {
+  .topbarRight{
+    display: none !important;
+  }
+   .topbarCenter {
+    margin-right: 2.2rem;
+   }
+   .topbarInput{
+    margin: 1rem;
+   }
+  
+  .topbarWrapper{
+    justify-content: space-around !important;
+   
+  }
+  
+}

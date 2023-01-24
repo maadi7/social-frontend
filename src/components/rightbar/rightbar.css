@@ -1,0 +1,164 @@
+.rightbar{
+    flex: 3.5;
+}
+.rightbarWrapper{
+    padding: 20px 20px 0 0;
+}
+.rightbarContainer{
+    display: flex;
+    align-items: center;
+
+}
+.rightbarImg{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.rightbarAd{
+    width: 100%;
+    border-radius: 20px;
+    margin:20px 0;
+}
+.rightbarTitle{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+.Friendlist{
+    flex: 3.5;
+    padding: 20px 20px 0 0;
+}
+.FriendlistHeading{
+    text-align: center;
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+.FriendlistContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    flex-wrap: wrap;
+
+}
+.FriendlistItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+}
+.FriendlistKey{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 60%;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.FriendlistValue{
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.userInfo{
+   padding: 10px;
+   margin-bottom: 20px;
+}
+.userInfoContainer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    
+}
+.userInfoKey{
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.userInfoValue{
+    font-weight: 300;
+    text-align: center;
+    
+}
+.rightbarFollowButton{
+    /* margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px; */
+    border: none;
+    background-color: #1872f2;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+.rightbarFollowButton:focus{
+    outline: none;
+  }
+
+.rightbarActions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}  
+.rightbarMessage{
+    border: none;
+    background-color: #1872f2;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .Friendlist{
+        flex: 0.5;
+    }
+    
+    .FriendlistKey{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .FriendlistKey{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .FriendlistValue{
+        font-size: 14px;
+        font-weight: 400;
+    }
+   
+    .FriendlistHeading{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .FriendlistItem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 5px;
+    }
+    .userInfoContainer{
+        margin-left: 5px;
+    }
+}

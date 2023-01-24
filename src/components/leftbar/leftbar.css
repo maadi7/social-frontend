@@ -1,0 +1,85 @@
+.leftbar{
+    flex: 3;
+    height: calc(100vh - 65px);
+    position: sticky;
+    overflow-y: scroll;
+    top: 65px;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 179, 179);
+  }
+.leftbarWrapper{
+    padding: 20px;
+}
+.leftbarWrapper > ul {
+   list-style: none;
+}
+.leftbarList > li{
+    list-style: none;
+}
+.leftbarListItem{
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+.leftbarListItemIcon{
+    font-size: 28px !important;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.leftbarListItemText{
+    font-size: 18px;
+    cursor: pointer;
+}
+.sidebarButton {
+    margin-left: 75px;
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .sidebarHr {
+    margin: 20px 0;
+  }
+  
+  .sidebarFriendList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .leftbar{
+      flex: 1.3;
+  }
+  }
+  @media screen and (max-width: 850px) {
+    .leftbarListItemIcon{
+      font-size: 20px !important;
+      margin-right: 5px;
+      cursor: pointer;
+  }
+  .leftbarListItemText{
+      font-size: 15px;
+      cursor: pointer;
+  }
+  .leftbarWrapper{
+    padding: 10px;
+}
+  }
+  @media screen and (max-width: 550px) {
+    .leftbar{
+      display: none !important;
+  }
+  }

@@ -1,0 +1,32 @@
+.conversation{
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   cursor: pointer;
+}
+.conversation:hover{
+    background-color: rgb(228, 219, 219);
+    border-radius: 20px;
+}
+.conversationImg{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.conversationText{
+    font-weight: 500;
+    margin-left: 10px;
+  
+}
+@media screen and (max-width: 640px) {
+    .conversationImg{
+        width: 35px;
+        height: 35px;
+    }
+    .conversationText{
+        font-size: 14px;
+        margin-left: 2px;
+      
+    }
+}
