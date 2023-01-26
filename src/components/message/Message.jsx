@@ -31,7 +31,7 @@ const Message = ({message, own, user}) => {
           
             <div className="messageMid" >
             <span className="messageSender">{sender.username}</span>
-            <img className="messageImg" src={sender.ProfilePicture ? PF + sender.ProfilePicture: PF + "person/noAvatar.webp"}   alt="" />
+            <img className="messageImg" src={sender.ProfilePicture ? sender.ProfilePicture: PF + "person/noAvatar.webp"}   alt="" />
             
             </div>
             <span className="messageText">{message.text}</span>
