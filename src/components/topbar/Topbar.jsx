@@ -22,7 +22,7 @@ const Topbar = () => {
   useEffect(()=>{
     const getAllUser = async () =>{
     try {
-      const res = await axios.get("/user/all");
+      const res = await axios.get("https://iserver.onrender.com/api/user/all");
       res.data.map((value)=>{
         d.push(value.username);
       });
@@ -40,7 +40,7 @@ const getProfile = async (val) =>{
   
   if(val === "") return;
   try {
-    const res = await axios.get("/user?username="+val);
+    const res = await axios.get("https://iserver.onrender.com/api/user?username="+val);
     if(res.data){
       navigate(`/profile/${val}`);
     }else{
