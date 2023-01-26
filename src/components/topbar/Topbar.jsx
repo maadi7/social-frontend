@@ -99,7 +99,7 @@ const getProfile = async (val) =>{
           </div>
           
         <Link to={`/profile/${user?.username}`} >
-        <img src={user?.ProfilePicture ? PF + user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" className="topbarImg"/>
+        <img src={user?.ProfilePicture ? user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" className="topbarImg"/>
         </Link>
         </div>
         </div>
@@ -112,7 +112,7 @@ const getProfile = async (val) =>{
         <div className="toggletopbarRight">
           <div className="toggletopbarRightLinks">
             <Link to={`/profile/${user?.username}`} >
-             <img src={user?.ProfilePicture ? PF + user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" className="toggletopbarImg"/>
+             <img src={user?.ProfilePicture ?  user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" className="toggletopbarImg"/>
             </Link>
             <div className="topbarLinks" onClick={()=>navigate("/")}>Homepage</div>
           </div>
