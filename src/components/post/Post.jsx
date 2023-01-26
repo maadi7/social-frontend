@@ -23,7 +23,7 @@ const Post = ({ post }) => {
 
     useEffect(() => {
         const fetchUser = async () => {
-            const res = await axios.get(`/user?userId=${post.userId}`);
+            const res = await axios.get(`https://iserver.onrender.com/api/user?userId=${post.userId}`);
             setUser(res.data);
 
         }
@@ -32,7 +32,7 @@ const Post = ({ post }) => {
 
     const handleVisit = async (id) =>{
         try {
-            const res = await axios.get(`/user?userId=${id}`);
+            const res = await axios.get(`https://iserver.onrender.com/api/user?userId=${id}`);
             navigate(`/profile/${res.data.username}`);
         } catch (error) {
             console.log(error);
@@ -44,7 +44,7 @@ const Post = ({ post }) => {
     const handleDelete = async (id) =>{
         if (window.confirm("Are you sure! you wan't to delete this post?")){
         try {
-              await axios.delete(`/post/${id}`, {data: {
+              await axios.delete(`https://iserver.onrender.com/api/post/${id}`, {data: {
                 userId: currentUser._id,
              }});
              //console.log(res.data);
@@ -61,7 +61,7 @@ const Post = ({ post }) => {
         try{
             console.log(post);
             console.log(currentUser._id);
-            await axios.put("/post/"+post._id+"/like", {userId: currentUser._id})
+            await axios.put("https://iserver.onrender.com/api/post/"+post._id+"/like", {userId: currentUser._id})
         }catch(err){
             
         }
