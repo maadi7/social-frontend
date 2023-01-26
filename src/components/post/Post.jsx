@@ -82,10 +82,10 @@ const Post = ({ post }) => {
                 {!username ?(
 
                 <Link  to={`profile/${user.username}`} >
-                    <img className='postTopImg' src={user.ProfilePicture ? PF + user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" />
+                    <img className='postTopImg' src={user.ProfilePicture ? user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" />
                 </Link>
                 ):(
-                    <img className='postTopImg' src={user.ProfilePicture ? PF + user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" />
+                    <img className='postTopImg' src={user.ProfilePicture ? user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" />
                 )}
                 <div className="postTopInfo">
                     <span className="postTopInfoText">{user.username}</span>
