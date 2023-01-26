@@ -14,8 +14,8 @@ const Feed = ({username}) => {
 
   useEffect(() =>{
     const fetchPost = async () =>{
-         const res = username ? await axios.get("/post/profile/"+username) :
-          await axios.get("post/timeline/"+user._id);
+         const res = username ? await axios.get("https://iserver.onrender.com/api/post/profile/"+username) :
+          await axios.get("https://iserver.onrender.com/api/post/timeline/"+user._id);
        
           setPosts(
             res.data.sort((p1, p2) =>{
