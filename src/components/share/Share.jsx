@@ -70,7 +70,7 @@ const Share = () => {
     <div className='share'>
       <div className="shareWrapper">
         <div className="shareTop">
-            <img src={user.ProfilePicture ? PF + user.ProfilePicture : PF + "person/noAvatar.webp"} className='shareTopImg' alt="" />
+            <img src={user.ProfilePicture ? user.ProfilePicture : PF + "person/noAvatar.webp"} className='shareTopImg' alt="" />
              {progress === 0 || progress !== 100 && <progress value={progress} max="100"/>}
             <input onChange={(e) => setDesc(e.target.value)} placeholder={"What's in your mind "+ user.username + "?"} className="shareTopInput" />
         </div>
