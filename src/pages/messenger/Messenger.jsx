@@ -23,7 +23,7 @@ const Messenger = () => {
    const scrollRef = useRef();
     
    useEffect(() =>{
-     socket.current = io("ws://localhost:8900");
+     socket.current = io("https://social-socket.onrender.com");
      socket.current.on("getMessage", (data)=>{
       setArrivalMessage({
         sender: data.senderId,
@@ -48,7 +48,7 @@ const Messenger = () => {
    useEffect(() =>{
       const getConversation = async () =>{
         try{
-          const res = await axios.get("conversation/"+user._id);
+          const res = await axios.get("https://iserver.onrender.com/api/conversation/"+user._id);
           setConversation(res.data);
         }catch(err){
           console.log(err);
@@ -61,7 +61,7 @@ const Messenger = () => {
    useEffect(() =>{
     const getMessage = async () =>{
       try {
-        const res = await axios.get("/message/"+currentChat?._id);
+        const res = await axios.get("https://iserver.onrender.com/api/message/"+currentChat?._id);
         setMessages(res.data);
       } catch (error) {
         console.log(error);
@@ -89,7 +89,7 @@ const Messenger = () => {
           conversationId: currentChat._id
         }
         try {
-          const res = await axios.post("/message", message);
+          const res = await axios.post("https://iserver.onrender.com/api/message", message);
           setMessages([...messages, res.data]);
           setNewMessages("");
         } catch (error) {
