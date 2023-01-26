@@ -44,7 +44,7 @@ const ChatOnline = ({onlineUsers, currentId, setCurrentChat}) => {
 
         <div className="chatOnlineFriend"  onClick={() => handleClick(o)} >
             <div className="chatOnlineImgContainer">
-                <img src={o?.ProfilePicture ? PF + o.ProfilePicture: PF + "person/noAvatar.webp"} className="chatOnlineImg"  alt="" />
+                <img src={o?.ProfilePicture ? o.ProfilePicture: PF + "person/noAvatar.webp"} className="chatOnlineImg"  alt="" />
                 <div className="chatOnlineBadge"></div>
             </div>
             <span className="chatOnlineText">{o.username}</span>
