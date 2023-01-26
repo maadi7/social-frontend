@@ -22,7 +22,7 @@ const Rightbar = ({user}) => {
     useEffect(() =>{
        const getFriends = async () =>{
         try{
-          const friendlist = await axios.get("/user/friends/"+user._id);
+          const friendlist = await axios.get("https://iserver.onrender.com/api/user/friends/"+user._id);
           setList(friendlist.data);
           
         }
@@ -37,12 +37,12 @@ const Rightbar = ({user}) => {
      const handleClick = async () =>{
       try {
         if (followed) {
-          await axios.put(`/user/${user._id}/unfollow`, {
+          await axios.put(`https://iserver.onrender.com/api/user/${user._id}/unfollow`, {
             userId: currentUser._id,
           });
           dispatch({ type: "UNFOLLOW", payload: user._id });
         } else {
-          await axios.put(`/user/${user._id}/follow`, {
+          await axios.put(`https://iserver.onrender.com/api/user/${user._id}/follow`, {
             userId: currentUser._id,
           });
           dispatch({ type: "FOLLOW", payload: user._id });
@@ -57,10 +57,10 @@ const Rightbar = ({user}) => {
      }
      const handleMessage = async () =>{
        try {
-        const response = await axios.get(`/conversation/find/${currentUser._id}/${user._id}`);
+        const response = await axios.get(`https://iserver.onrender.com/api/conversation/find/${currentUser._id}/${user._id}`);
        
         if(!response.data){
-          const res = axios.post("/conversation", {
+          const res = axios.post("https://iserver.onrender.com/api/conversation", {
             senderId:currentUser._id, receiverId:user._id
           });
           navigate("/messenger");
