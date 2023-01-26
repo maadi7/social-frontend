@@ -97,7 +97,7 @@ const Register = () => {
           CoverPicture: cover,
         };
         try {
-          const res = await axios.post("/auth/register", user);
+          const res = await axios.post("https://iserver.onrender.com/api/auth/register", user);
           console.log(res.data.username);
           if(res.data.username){
             navigate("/login");
