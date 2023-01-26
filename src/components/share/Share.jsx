@@ -53,7 +53,7 @@ const Share = () => {
         img: urlAddress
       } 
       try {
-         await axios.post("/post", newPost);
+         await axios.post("https://iserver.onrender.com/api/post", newPost);
         console.log("posted");
         // setTimeout(()=>)
         window.location.reload();
