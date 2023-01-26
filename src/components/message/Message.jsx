@@ -11,7 +11,7 @@ const Message = ({message, own, user}) => {
     const getSender = async () =>{
       try {
         console.log(message);
-        const res = await axios.get("/user?userId="+message?.sender);
+        const res = await axios.get("https://iserver.onrender.com/api/user?userId="+message?.sender);
         setSender(res.data);
       } 
       catch (error) {
