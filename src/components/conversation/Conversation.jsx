@@ -30,7 +30,7 @@ const Conversation = ({conversation, currentUser}) => {
 
   return (
     <div className="conversation">
-        <img className="conversationImg" src={user?.ProfilePicture ? PF + user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" />
+        <img className="conversationImg" src={user?.ProfilePicture ? user.ProfilePicture : PF + "person/noAvatar.webp"} alt="" />
         <span className="conversationText">{user?.username}</span>
     </div>
   )
