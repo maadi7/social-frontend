@@ -14,7 +14,7 @@ const Conversation = ({conversation, currentUser}) => {
      
     const getUser = async () =>{
       try {
-        const res = await axios("/user?userId="+friendId);
+        const res = await axios("https://iserver.onrender.com/api/user?userId="+friendId);
         setUser(res.data);
 
       } 
