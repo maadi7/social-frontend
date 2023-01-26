@@ -11,7 +11,7 @@ const ChatOnline = ({onlineUsers, currentId, setCurrentChat}) => {
 
   useEffect(() =>{
       const getFriends = async () =>{
-        const res = await axios.get("/user/friends/"+currentId);
+        const res = await axios.get("https://iserver.onrender.com/api/user/friends/"+currentId);
         setFriends(res.data);
       }
       getFriends();
@@ -29,7 +29,7 @@ const ChatOnline = ({onlineUsers, currentId, setCurrentChat}) => {
   const handleClick = async (user) => {
     try {
       const res = await axios.get(
-        `/conversation/find/${currentId}/${user._id}`
+        `https://iserver.onrender.com/api/conversation/find/${currentId}/${user._id}`
       );
       setCurrentChat(res.data);
     } catch (err) {
